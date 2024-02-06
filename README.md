@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Order Summary Card](https://afonso-maia.github.io/frontend-mentor-order-summary/)
 
 ## My process
 
