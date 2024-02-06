@@ -1,0 +1,182 @@
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --bright-blue-hover: hsl(245, 83%, 68%);
+
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-color: var(--pale-blue);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 450px;
+  height: 697px;
+  background-color: white;
+  box-shadow: 0 40px 40px -20px hsla(245, 75%, 52%, 0.15);
+  border-radius: 20px;
+  overflow: clip;
+}
+
+.content {
+  padding: 45px 48px 48px 48px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 17px;
+}
+
+.description {
+  text-align: center;
+  line-height: 26px;
+  color: var(--desaturated-blue);
+}
+
+.plan {
+  display: flex;
+  gap: 20px;
+  height: 98px;
+  width: 100%;
+  background-color: var(--very-pale-blue);
+  padding: 24px;
+  margin-block: 20px 32px;
+  border-radius: 11px;
+  align-items: center;
+}
+
+.plan-info {
+  flex: 1;
+}
+
+.plan-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--dark-blue);
+}
+
+.plan-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--desaturated-blue);
+}
+
+.plan-change_btn {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--bright-blue);
+  &:hover {
+    text-decoration: none;
+    color: var(--bright-blue-hover);
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.btn {
+  width: 100%;
+  border: none;
+  height: 50px;
+  border-radius: 11px;
+  font-weight: 900;
+  font-size: 15px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-primary {
+  color: white;
+  background-color: var(--bright-blue);
+  box-shadow: 0 20px 20px hsla(245, 75%, 52%, 0.19);
+  &:hover {
+    background-color: var(--bright-blue-hover);
+  }
+}
+
+.btn-secondary {
+  color: var(--desaturated-blue);
+  background: none;
+  width: fit-content;
+  height: fit-content;
+  &:hover {
+    color: var(--dark-blue);
+  }
+}
+
+@media (width < 376px) {
+  body {
+    background-image: url("./images/pattern-background-mobile.svg");
+  }
+
+  .card {
+    width: 327px;
+    height: 567px;
+  }
+
+  .illustration {
+    height: 160px;
+  }
+
+  .content {
+    padding: 32px;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .plan {
+    gap: 20px;
+    height: 81px;
+    padding: 16px;
+    margin-block: 24px;
+  }
+
+  .plan-title {
+    font-size: 14px;
+  }
+
+  .plan-price {
+    font-size: 14px;
+  }
+
+  .actions {
+    gap: 24px;
+  }
+
+  .btn {
+    font-size: 15px;
+  }
+}
